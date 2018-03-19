@@ -3,7 +3,6 @@ def dot_tree(problem):
 pre : a Problem() as input    
 post: Dot graph in string format. Paste this in http://www.webgraphviz.com/ 
 usage: print(dot_tree(problem))  
-  
 """
     root = Node(problem.initial)    
     flatten = lambda l: [item for sublist in l for item in sublist]
