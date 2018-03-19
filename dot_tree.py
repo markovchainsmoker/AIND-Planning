@@ -12,12 +12,12 @@ usage: print(dot_tree(problem))
     greatgrandchildren=flatten([[child.child_node(problem, action) for action in problem.actions(child.state)] for child in grandchildren])    
     nodes=set(children+grandchildren+greatgrandchildren)
     import pydot    
-    """    
+"""    
     make a Dot graph of the nodes and connections    
     initial state as double circle     
     goal state is marked with thick lines    
     current implementation only goes two levels down (greatgrandchildren)    
-    """            
+"""            
     g = pydot.Dot()    
     g.set_type('digraph')    
     g.set_node_defaults(fontname = "helvetica",fontsize=10)    
