@@ -2,7 +2,6 @@ def dot_tree(problem):
 """    
 pre : a Problem() as input    
 post: Dot graph in string format. Paste this in http://www.webgraphviz.com/ 
-
 usage: print(dot_tree(problem))  
   
 """
