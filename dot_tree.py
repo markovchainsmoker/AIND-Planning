@@ -30,3 +30,6 @@ def dot_tree(problem):
     for n in nodes:
         g.add_edge(pydot.Edge(n.parent.state,n.state,label='{} ({})'.format(n.action.name,n.action.args)))    
    return g.to_string()
+
+
+        self.a_levels.append(set())                #possible_actions = []        kb = PropKB()                kb.tell(self.fs.pos_sentence())                for action in self.all_actions:            is_possible = True            for clause in action.precond_pos:                if clause not in kb.clauses:                    is_possible = False            for clause in action.precond_neg:                if clause in kb.clauses:                    is_possible = False            if is_possible:                self.a_levels[level].add(PgNode_a(action))
