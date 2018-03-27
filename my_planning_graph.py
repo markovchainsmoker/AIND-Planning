@@ -2,6 +2,7 @@ from aimacode.planning import Action
 from aimacode.search import Problem
 from aimacode.utils import expr, Expr
 from lp_utils import decode_state
+from aimacode.logic import PropKB
 
 
 class PgNode():
@@ -306,6 +307,24 @@ class PlanningGraph():
         #   set iff all prerequisite literals for the action hold in S0.  This can be accomplished by testing
         #   to see if a proposed PgNode_a has prenodes that are a subset of the previous S level.  Once an
         #   action node is added, it MUST be connected to the S node instances in the appropriate s_level set.
+        
+        self.a_levels.append(set())
+        possible_actions = []
+        kb = PropKB()
+        kb.tell(self.fs.sentence())
+        
+        for action in self.all_actions:
+        	is_possible = True
+        	for clause in action.precond_pos:
+        		if clause not in kb.clauses:
+        			is_possible = False
+        for clause in action.precond_neg:
+        				if clause in kb.clauses:
+        					is_possible = False
+        if is_possible:
+        	a_node=PgNode_a(action)
+        	a_node.parents=self.s_levels[level]
+        	self.a_levels[level].add(a_node)
 
     def add_literal_level(self, level):
         """ add an S (literal) level to the Planning Graph
