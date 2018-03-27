@@ -324,7 +324,10 @@ class PlanningGraph():
         #   may be "added" to the set without fear of duplication.  However, it is important to then correctly create and connect
         #   all of the new S nodes as children of all the A nodes that could produce them, and likewise add the A nodes to the
         #   parent sets of the S nodes
-
+        self.s_levels.append(set())
+        for literal in self.fs.pos:self.s_levels[level].add(PgNode_s(literal, True))
+        for literal in self.fs.neg:self.s_levels[level].add(PgNode_s(literal, False))
+            
     def update_a_mutex(self, nodeset):
         """ Determine and update sibling mutual exclusion for A-level nodes
 
