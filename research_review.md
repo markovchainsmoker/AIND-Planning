@@ -45,8 +45,9 @@ So, in theory, planning seems at the heart of AI. But how useful is it? With the
 Classing planning, where we go from an initial state to a goal, requires a good definition of the problem so that A* can be applied. The first major game to apply this was F.E.A.R. in 2005. A planner was implemented to generate NPC behavior. This was feasible even 13 years ago due to the problems having short sequences. The game spawned a sequel, two expansions and inspired at least 5 other title.
 One of the later iterations, Stalker (2008), added a nested structure so that more complex sequences could be generated out of the core STRIPS search.
 #### Hierarchial Networks (HTN)
-HTN searches through actions that break down **recursively** using **task decomposition** and was first featured in Killzone 2, as the designers they wanted more control over the behaviors (approaching the Acting Humanly side). A **SHOP** (Simple Hierarchial Ordered Planner) turned out a big success, and allegedly the players were often suprised that the in-game bots were not in fact online players, thereby passing a type of **Turing test**.
+HTN searches through actions that break down **recursively** using **task decomposition** and was first featured in Killzone 2, as the designers they wanted more control over the behaviors (approaching the Acting Humanly side). A **SHOP** (Simple Hierarchial Ordered Planner) turned out a big success, and allegedly the players were often suprised that the in-game bots were not in fact online players, thereby passing a type of **Turing test**. The later game Transformers used a similar **SHOP** algorithm which also tracked the (side)effects of all actions.
 
+![state space](images/shop.png)
 
 ## PDDL: A Language with a Purpose?
 
@@ -58,7 +59,11 @@ HTN searches through actions that break down **recursively** using **task decomp
 
 
 
+You can also put the [link URL][1] below the current paragraph
+like [this][2].
 
+   [1]: http://url
+   [2]: http://another.url "A funky title"
 
 
 
