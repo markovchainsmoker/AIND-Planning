@@ -10,7 +10,7 @@
 	- ###### Practical use
 	- ###### Choice of research papers
 - ##### Planning in Games: An Overview and Lessons Learned
-- ##### PDDL: A Language with a Purpose?
+ - ##### PDDL: A Language with a Purpose?
 
 
 ## Introduction
@@ -45,8 +45,7 @@ So, in theory, planning seems at the heart of AI. But how useful is it? With the
 Classing planning, where we go from an initial state to a goal, requires a good definition of the problem so that A* can be applied. The first major game to apply this was F.E.A.R. in 2005. A planner was implemented to generate NPC behavior. This was feasible even 13 years ago due to the problems having short sequences. The game spawned a sequel, two expansions and inspired at least 5 other title.
 One of the later iterations, Stalker (2008), added a nested structure so that more complex sequences could be generated out of the core STRIPS search.
 #### Hierarchial Networks (HTN)
-HTN searches through actions that break down **recursively** using **task decomposition** and was first featured in Killzone 2, as the designers they wanted more control over the behaviors.
-
+HTN searches through actions that break down **recursively** using **task decomposition** and was first featured in Killzone 2, as the designers they wanted more control over the behaviors (approaching the Acting Humanly side). A **SHOP** (Simple Hierarchial Ordered Planner) turned out a big success, and allegedly the players were often suprised that the in-game bots were not in fact online players, thereby passing a type of **Turing test**.
 
 
 ## PDDL: A Language with a Purpose?
@@ -114,12 +113,7 @@ Init(At(C1, SFO) ∧ At(C2, JFK) ∧ At(C3, ATL) ∧ At(C4, ORD)
 Goal(At(C1, JFK) ∧ At(C3, JFK) ∧ At(C2, SFO) ∧ At(C4, SFO))
 ```
 
-#### TODO: Implement methods and functions in `my_air_cargo_problems.py`
-- `AirCargoProblem.get_actions` method including `load_actions` and `unload_actions` sub-functions
-- `AirCargoProblem.actions` method
-- `AirCargoProblem.result` method
-- `air_cargo_p2` function
-- `air_cargo_p3` function
+
 
 #### TODO: Experiment and document metrics for non-heuristic planning solution searches
 * Run uninformed planning searches for `air_cargo_p1`, `air_cargo_p2`, and `air_cargo_p3`; provide metrics on number of node expansions required, number of goal tests, time elapsed, and optimality of solution for each search algorithm. Include the result of at least three of these searches, including breadth-first and depth-first, in your write-up (`breadth_first_search` and `depth_first_graph_search`). 
