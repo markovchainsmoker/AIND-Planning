@@ -47,6 +47,11 @@ One of the later iterations, Stalker (2008), added a nested structure so that mo
 #### Hierarchial Networks (HTN)
 HTN searches through actions that break down **recursively** using **task decomposition** and was first featured in Killzone 2, as the designers they wanted more control over the behaviors (approaching the Acting Humanly side). A **SHOP** (Simple Hierarchial Ordered Planner) turned out a big success, and allegedly the players were often suprised that the in-game bots were not in fact online players, thereby passing a type of **Turing test**. The later game Transformers used a similar **SHOP** algorithm which also tracked the (side)effects of all actions.
 
+Generally, SHOP focuses on two core issues in planning:
+- Planners can always benefit from being faster. This research in particular aims to show how total-order forward search (where each action is applied in order from the start state) can in fact be a more efficient way to encode domain knowledge.
+- For many types of planners, including HTN, their limitation is in the flexibility of the domain. Custom procedural functions can be hard to integrate when you don’t know how the planner may combine actions while planning. So instead, it can be better to limit the expressiveness of the planner (by imposing an order on the plans) to make it easy to insert custom logic.
+SHOP addresses these two issues to build a planner that can solve problems more efficiently using domain knowledge encoded as custom logic. 
+
 ![state space](images/shop.png)
 
 ## PDDL: A Language with a Purpose?
