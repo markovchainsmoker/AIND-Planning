@@ -35,7 +35,10 @@ This is also featured here, as we are dealing with employing **search** and **pl
 
 
 ### Practical use
-So, in theory, planning seems at the heart of AI. But how useful is it? With the recent hype around **neural networks** and **deep learning**, is planning (and planning graphs) still relevant? Some of my classmates did not seem convinced.
+So, in theory, planning seems at the heart of AI. But how useful is it? With the recent hype around **neural networks** and **deep learning**, is planning (and planning graphs) still relevant? Some of my classmates did not seem convinced. 
+
+#### Practical applications of shortest path algorithms
+Consider a market for financial transactions that is based on trading commodities. The table in rates.txt shows conversion rates among currencies. The first line in the file is the number V of currencies; then the file has one line per currency, giving its name followed by the conversion rates to the other currencies. An arbitrage opportunity is a directed cycle such that the product of the exchange rates is greater than one. For example, our table says that 1,000 U.S. dollars will buy 1,000.00 × .741 = 741 euros, then we can buy 741 × 1.366 = 1,012.206 Canadian dollars with our euros, and finally, 1,012.206 × .995 = 1,007.14497 U.S. dollars with our Canadian dollars, a 7.14497-dollar profit! 
 
 ### Choice of research papers
 
@@ -81,12 +84,17 @@ Planning has most benefits in **unknown domains**. One of the benefits of planni
 
 Regardless of whether developers use planning techniques or not, an architecture that separates the AI's goals (or WHAT to do) and the AI's decision making (or HOW to do it), has proven to be very effective. Planning research has helped crystallize this insight, and even when using reactive techniques this is arguably a best practice for AI architecture in games today.
 
+## Planning as Tabled Logic Programming
+
+This paper describes Picat’s planner, its implementation, and planning models for several domains used in International Planning Competition (IPC) 2014. Picat’s planner is implemented by use of tabling. During search, every state encountered is tabled, and tabled states are used to eﬀectively perform resource-bounded search. In Picat, structured data can be used to avoid enumerating all possible permutations of objects, and term sharing is used to avoid duplication of common state data. This paper presents several modeling techniques through the example models, ranging from designing state representations to facilitate data sharing and symmetry breaking, encoding actions with operations for eﬃcient precondition checking and state updating, to incorporating domain knowledge and heuristics. Broadly, this paper demonstrates the eﬀectiveness of tabled logic programming for planning, and argues the importance of modeling despite recent signiﬁcant progress in domain-independent PDDL planners.
+
+
+Tabling (Michie 1968; Tamaki and Sato 1986; Warren 1992) is a technique used in logic and functional programming systems, which caches the results of certain calculations in memory and reuses them in subsequent calculations through a quick table lookup. Like state marking used in search algorithms, tabling can prevent the same state from being expanded more than once during search. Tabling has been found useful in many search problems, including theorem proving (Nielson et al. 2004; Pientka 2003), program analysis (Dawson et al. 1996) and model checking (Ramakrishna et al. 1997). Recently, tabled logic programming has been successfully employed to solve speciﬁc planning problems (Bartak and Zhou 2014; Zhou and Dovier 2013; Zhou 2014), and has been shown to be
+
+ As a modeling language for planning, Picat diﬀers from PDDL (Plan Domain Description Language) (McDermott 1998) and ASP (Brewka et al. 2011; Gebser et al. 2012; Lifschitz 2002) in several aspects: (1) Picat allows use of structures to represent states; (2) Picat supports explicit commitment and nondeterministic actions, which enables users to have better control over action applications; (3) Picat provides facilities for describing domain knowledge and heuristics for pruning search space. As a solving system, Picat’s planner implements several techniques for better performance. First, it tables every state encountered during search and avoids repeating the exploration of the same state. Second, it adopts the hash-consing technique (Zhou and Have 2012) to share common state data and to speed up the equality testing of states. Third, it utilizes tabled states to eﬀectively perform resource-bounded search. For optimal planning, Picat oﬀers built-ins to perform iterative search, but unlike IDA* (Korf 1985), Picat also reuses results tabled in early iterations (Zhou 2014). This paper shows that the above-mentioned features of Picat make Picat a more appropriate language than PDDL for modeling and solving planning problems. To that end, this paper presents examples in Picat for several domains used in IPC’14. These examples illustrate several modeling techniques on how to design state representations to facilitate data sharing and symmetry breaking, on how to translate PDDL operators into Picat actions, and on how to incorporate domain knowledge and heuristics to reduce search spaces. This paper also gives the experimental results of the presented models and several other models encoded in the same way. The experimental results demonstrate the eﬀectiveness of tabling and the importance of modeling.
+
+
 ## PDDL: A Language with a Purpose?
-
-
-## Practical applications of shortest path algorithms
-
-Consider a market for financial transactions that is based on trading commodities. The table in rates.txt shows conversion rates among currencies. The first line in the file is the number V of currencies; then the file has one line per currency, giving its name followed by the conversion rates to the other currencies. An arbitrage opportunity is a directed cycle such that the product of the exchange rates is greater than one. For example, our table says that 1,000 U.S. dollars will buy 1,000.00 × .741 = 741 euros, then we can buy 741 × 1.366 = 1,012.206 Canadian dollars with our euros, and finally, 1,012.206 × .995 = 1,007.14497 U.S. dollars with our Canadian dollars, a 7.14497-dollar profit! 
 
 
 ### References
