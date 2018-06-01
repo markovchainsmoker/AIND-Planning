@@ -46,6 +46,10 @@ So, in theory, planning seems at the heart of AI. But how useful is it? With the
 - PDDL: A Language with a Purpose?
 	- critique of PDDL usefullness in theoretical and practical terms
 	- dfdf
+	
+- PDDL: A Language with a Purpose?
+	- critique of PDDL usefullness in theoretical and practical terms
+	- dfdf
 
 ## Planning in Games: An Overview and Lessons Learned
 ### Classical planning (STRIPS)
@@ -66,7 +70,7 @@ To deal with this, SHOP limits the expressiveness of the planner (by imposing an
 ### Related techniques
 A **behavior tree** is similar to a HTN but stops at current action if "this is likely to work out", rather than searching the full graph. These have been in use in the industry since 2004, inspired by robotics and virtual agents from decades before.
 A utility system is the term used to describe a voting/scoring system, and they are often applied to sub-systems of games like selecting objects/positions based on the results of a spread-sheet like calculation. Featured in **The Sims**.
-
+ 
 #### Summary
 
 The biggest open questions for using planners in game AI are about design, how to tweak the behaviors resulting from planners, and thinking more in terms of systems and emergent AIs. This has required significantly more effort than the pure algorithmic aspects of planning, and is responsible for the incremental transition towards hierarchical approaches.
@@ -77,23 +81,34 @@ Planning has most benefits in **unknown domains**. One of the benefits of planni
 
 Regardless of whether developers use planning techniques or not, an architecture that separates the AI's goals (or WHAT to do) and the AI's decision making (or HOW to do it), has proven to be very effective. Planning research has helped crystallize this insight, and even when using reactive techniques this is arguably a best practice for AI architecture in games today.
 
-
-
 ## PDDL: A Language with a Purpose?
 
 
+## Practical applications of shortest path algorithms
+
+Consider a market for financial transactions that is based on trading commodities. The table in rates.txt shows conversion rates among currencies. The first line in the file is the number V of currencies; then the file has one line per currency, giving its name followed by the conversion rates to the other currencies. An arbitrage opportunity is a directed cycle such that the product of the exchange rates is greater than one. For example, our table says that 1,000 U.S. dollars will buy 1,000.00 × .741 = 741 euros, then we can buy 741 × 1.366 = 1,012.206 Canadian dollars with our euros, and finally, 1,012.206 × .995 = 1,007.14497 U.S. dollars with our Canadian dollars, a 7.14497-dollar profit! 
 
 
+### References
+
+- *Planning in Games: An Overview and Lessons Learned*, **Alex J. Champandard**, AiGameDev.com (2013) http://aigamedev.com/open/review/planning-in-games/
+
+- *PDDL: A Language with a Purpose?*, **T. L. McCluskey**, Department of Computing and Mathematical Science, School of Computing and Engineering,University of Huddersfield, UK
+
+- *PDDL: A Language with a Purpose?*, **T. L. McCluskey**, Department of Computing and Mathematical Science, School of Computing and Engineering,University of Huddersfield, UK
 
 
-
+   [1]: http://aigamedev.com/open/review/planning-in-games/ "Planning in Games"
+   [2]: https://algs4.cs.princeton.edu/44sp/ "FX Arbitrage"
+   [3]: University of Huddersfield, UK, https://algs4.cs.princeton.edu/44sp/ "PDDL: A Language with a Purpose?"
 
 
 You can also put the [link URL][1] below the current paragraph
 like [this][2].
 
-   [1]: http://aigamedev.com/open/review/planning-in-games/
-   [2]: http://another.url "A funky title"
+   [1]: http://aigamedev.com/open/review/planning-in-games/ "Planning in Games"
+   [2]: https://algs4.cs.princeton.edu/44sp/ "FX Arbitrage"
+   [3]: https://algs4.cs.princeton.edu/44sp/ "PDDL: A Language with a Purpose?"
 
 
 
