@@ -39,24 +39,21 @@ This is also featured here, as we are dealing with employing **search** and **pl
 
 
 ### Practical use
-So, in theory, planning seems at the heart of AI. But how useful is it? With the recent hype around **neural networks** and **deep learning**, is planning (and planning graphs) still relevant? Some of my classmates did not seem convinced. 
-
-#### Practical applications of shortest path algorithms
-Consider a market for financial transactions that is based on trading commodities. The table in rates.txt shows conversion rates among currencies. The first line in the file is the number V of currencies; then the file has one line per currency, giving its name followed by the conversion rates to the other currencies. An arbitrage opportunity is a directed cycle such that the product of the exchange rates is greater than one. For example, our table says that 1,000 U.S. dollars will buy 1,000.00 × .741 = 741 euros, then we can buy 741 × 1.366 = 1,012.206 Canadian dollars with our euros, and finally, 1,012.206 × .995 = 1,007.14497 U.S. dollars with our Canadian dollars, a 7.14497-dollar profit! 
+So, in theory, planning seems at the heart of AI. But how useful is it? With the recent hype around **neural networks** and **deep learning**, is planning (and planning graphs) still relevant? Some of my classmates did not seem convinced. For this reason, I decided to focus on some practical applications of planning and PDDL.
 
 ### Choice of research papers
 
 - Planning in Games: Planning in Games: An Overview and Lessons Learned
-	- Active industry applications
+	- practical implications in industry applications
 	- Discusses hiearical planning
 
 - PDDL: A Language with a Purpose?
 	- critique of PDDL usefullness in theoretical and practical terms
 	- dfdf
 	
-- PDDL: A Language with a Purpose?
-	- critique of PDDL usefullness in theoretical and practical terms
-	- dfdf
+- Planning as Tabled Logic Programming
+	- Argues that the features of tabled logic (Picat) model make it a more appropriate language than PDDL for modeling and solving planning problems. 
+	
 
 ## Planning in Games: An Overview and Lessons Learned
 ### Classical planning (STRIPS)
@@ -78,7 +75,7 @@ To deal with this, SHOP limits the expressiveness of the planner (by imposing an
 A **behavior tree** is similar to a HTN but stops at current action if "this is likely to work out", rather than searching the full graph. These have been in use in the industry since 2004, inspired by robotics and virtual agents from decades before.
 A utility system is the term used to describe a voting/scoring system, and they are often applied to sub-systems of games like selecting objects/positions based on the results of a spread-sheet like calculation. Featured in **The Sims**.
  
-### Summary
+### Lessons learned
 
 - The biggest open questions for using planners in game AI are about **design**, how to tweak the behaviors resulting from planners, and thinking more in terms of systems and emergent AIs. This has required significantly more effort than the pure algorithmic aspects of planning, and is responsible for the incremental transition towards hierarchical approaches.
 
@@ -110,9 +107,6 @@ As a solving system, Picat’s planner implements several techniques for better 
 + Second, it adopts the hash-consing technique (Zhou and Have 2012) to share common state data and to speed up the equality testing of states. 
 +Third, it utilizes tabled states to eﬀectively perform resource-bounded search. 
 
-### Summary
-The paper argues that the features of Picat make it a more appropriate language than PDDL for modeling and solving planning problems. 
-
 ## PDDL: A Language with a Purpose?
 
 
@@ -123,6 +117,10 @@ The paper argues that the features of Picat make it a more appropriate language 
 - *PDDL: A Language with a Purpose?*, **T. L. MCCLUSKEY**, Department of Computing and Mathematical Science, School of Computing and Engineering,University of Huddersfield, UK (June, 2003)
 
 - *Planning as Tabled Logic Programming*, **N-F. ZHOU**, CUNY Brooklyn College and Graduation Center (July, 2015)   https://arxiv.org/pdf/1507.03979.pdf
+
+
+
+
 
 
 
