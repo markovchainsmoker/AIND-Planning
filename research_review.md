@@ -13,14 +13,6 @@
 - ##### PDDL: A Language with a Purpose?
 
 
-#### Introduction
-##### Definitions of AI
-##### Practical use
-##### Choice of research papers
-#### Planning in Games: An Overview and Lessons Learned
-#### PDDL: A Language with a Purpose?
-
-
 ## Introduction
 ### Definitions of AI
 
@@ -48,7 +40,12 @@ So, in theory, planning seems at the heart of AI. But how useful is it? With the
 	- dfdf
 
 ## Planning in Games: An Overview and Lessons Learned
-
+### Classical vs Hierchial
+#### Classical planning (STRIPS)
+Classing planning, where we go from an initial state to a goal, requires a good definition of the problem so that A* can be applied. The first major game to apply this was F.E.A.R. in 2005. A planner was implemented to generate NPC behavior. This was feasible even 13 years ago due to the problems having short sequences. The game spawned a sequel, two expansions and inspired at least 5 other title.
+One of the later iterations, Stalker (2008), added a nested structure so that more complex sequences could be generated out of the core STRIPS search.
+#### Hierarchial Networks (HTN)
+HTN searches through actions that break down **recursively** using **task decomposition** and was first featured in Killzone 2, as the designers they wanted more control over the behaviors.
 
 
 
