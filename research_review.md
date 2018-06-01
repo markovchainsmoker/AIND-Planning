@@ -3,6 +3,12 @@
 ---
 # Research review
 
+[TOC]
+
+## Introduction
+### Definitions of AI
+### Practical use
+
 ## Introduction
 ### Definitions of AI
 
