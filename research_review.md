@@ -74,7 +74,7 @@ To deal with this, SHOP limits the expressiveness of the planner (by imposing an
 A **behavior tree** is similar to a HTN but stops at current action if "this is likely to work out", rather than searching the full graph. These have been in use in the industry since 2004, inspired by robotics and virtual agents from decades before.
 A utility system is the term used to describe a voting/scoring system, and they are often applied to sub-systems of games like selecting objects/positions based on the results of a spread-sheet like calculation. Featured in **The Sims**.
  
-#### Summary
+### Summary
 
 - The biggest open questions for using planners in game AI are about **design**, how to tweak the behaviors resulting from planners, and thinking more in terms of systems and emergent AIs. This has required significantly more effort than the pure algorithmic aspects of planning, and is responsible for the incremental transition towards hierarchical approaches.
 
@@ -95,11 +95,19 @@ Like state marking used in search algorithms, tabling can prevent the same state
 
 During search, every state encountered is tabled, and tabled states are used to eﬀectively perform resource-bounded search. In Picat, structured data can be used to **avoid enumerating all possible permutations** of objects, and term sharing is used to avoid duplication of common state data. 
 
+### Comparison to PDDL
 As a modeling language for planning, Picat diﬀers from PDDL in several aspects: 
 1 Picat allows use of structures to represent states 
 + Picat supports explicit commitment and nondeterministic actions, which enables users to have better control over action applications
-+ Picat provides facilities for describing domain knowledge and heuristics for pruning search space. As a solving system, Picat’s planner implements several techniques for better performance. First, it tables every state encountered during search and avoids repeating the exploration of the same state. Second, it adopts the hash-consing technique (Zhou and Have 2012) to share common state data and to speed up the equality testing of states. Third, it utilizes tabled states to eﬀectively perform resource-bounded search. For optimal planning, Picat oﬀers built-ins to perform iterative search, but unlike IDA* (Korf 1985), Picat also reuses results tabled in early iterations (Zhou 2014). This paper shows that the above-mentioned features of Picat make Picat a more appropriate language than PDDL for modeling and solving planning problems. To that end, this paper presents examples in Picat for several domains used in IPC’14. These examples illustrate several modeling techniques on how to design state representations to facilitate data sharing and symmetry breaking, on how to translate PDDL operators into Picat actions, and on how to incorporate domain knowledge and heuristics to reduce search spaces. This paper also gives the experimental results of the presented models and several other models encoded in the same way. The experimental results demonstrate the eﬀectiveness of tabling and the importance of modeling.
++ Picat provides facilities for describing domain knowledge and heuristics for pruning search space. 
 
+As a solving system, Picat’s planner implements several techniques for better performance. 
+1 First, it tables every state encountered during search and avoids repeating the exploration of the same state.
++ Second, it adopts the hash-consing technique (Zhou and Have 2012) to share common state data and to speed up the equality testing of states. 
++Third, it utilizes tabled states to eﬀectively perform resource-bounded search. 
+
+### Summary
+The paper argues that the features of Picat make it a more appropriate language than PDDL for modeling and solving planning problems. 
 
 ## PDDL: A Language with a Purpose?
 
