@@ -8,13 +8,13 @@
 
 Several definitions of AI exist, along two dimensions Thinking (Humanly vs Rationally) and Acting (Humanly vs Rationally). **Planning** seems to be a field of AI which fits well the two definitions given by our lecturers:
 
->AI is programming a computer to do the right thing *when you don't know what the right things is*.
+>AI is programming a computer to do the right thing *when you don't know what the right things is*. - **Peter Norvig**
 	
-   **Peter Norvig**
+ 
    
 This is the case in planning problems, as we are generating a behavior (which is generally on the Rationalist side but might be towards the Humanist side depending on the application) without knowing what that the optimal behavior will be.
 
->AI is clever solutions to exponential problems. 
+>AI is clever solutions to exponential problems. - **Thad Starner**
 
    **Thad Starner**
 
