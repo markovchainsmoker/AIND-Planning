@@ -85,6 +85,18 @@ A utility system is the term used to describe a voting/scoring system, and they 
 
 - Regardless of whether developers use planning techniques or not, an architecture that **separates the AI's goals** (or WHAT to do) and the **AI's decision making** (or HOW to do it), has proven to be very effective. 
 
+
+## Multi-Agent Planning with Planning Graph
+In this paper, we consider planning for multi-agents situations in STRIPS-like domains with planning graph. Three
+possible relationships between agents’ goals are considered in order to evaluate plans: the agents may be **collaborative**,
+**adversarial** or **indifferent** entities. We propose algorithms to deal with each situation. The collaborative situations can
+be easily dealt with the original Graphplan algorithm by redefining the domain in a proper way. Forward-chaining and
+backward chaining algorithms are discussed to find infallible plans in adversarial situations. In case such plans cannot be
+found, the agent can still attempt to find a plan for achieving some part of the goals. A forward-chaining algorithm is also
+proposed to find plans for agents with independent goals
+
+
+
 ## Planning as Tabled Logic Programming
 ### Picat's planner
 This paper describes **Picat’s planner**, its implementation, and planning models as an **alternative to PDDL style planners**.
@@ -107,14 +119,41 @@ As a solving system, Picat’s planner implements several techniques for better 
 + Second, it adopts the hash-consing technique (Zhou and Have 2012) to share common state data and to speed up the equality testing of states. 
 +Third, it utilizes tabled states to eﬀectively perform resource-bounded search. 
 
+
+
+
+
+
+
+
 ## PDDL: A Language with a Purpose?
 
+
+
+
+
+
+Good planning algorithms are hard to devise, but fairly easy
+to evaluate; on the other hand, modelling languages are
+fairly easy to devise, but hard to evaluate
 
 ## References
 
 - *Planning in Games: An Overview and Lessons Learned*, **Alex J. CHAMPANDARD**, AiGameDev.com (March, 2013) http://aigamedev.com/open/review/planning-in-games/
 
-- *PDDL: A Language with a Purpose?*, **T. L. MCCLUSKEY**, Department of Computing and Mathematical Science, School of Computing and Engineering,University of Huddersfield, UK (June, 2003)
-
 - *Planning as Tabled Logic Programming*, **N-F. ZHOU**, CUNY Brooklyn College and Graduation Center (July, 2015)   https://arxiv.org/pdf/1507.03979.pdf
 
+- *Multi-Agent Planning with Planning Graph* **T.D. BUIL**,Parlevink Group, University of Twente, Netherlands (2003) http://krak.ipipan.waw.pl/~wjamroga/papers/plangraph03eunite.pdf
+
+
+
+
+
+
+- *PDDL: A Language with a Purpose?*, **T. L. MCCLUSKEY**, Department of Computing and Mathematical Science, School of Computing and Engineering,University of Huddersfield, UK (June, 2003)
+
+https://baldur.iti.kit.edu/theses/ParallelizingGraphplan.pdf
+
+- *Multi-Agent Planning with Planning Graph*, **T. L. MCCLUSKEY**, Department of Computing and Mathematical Science, School of Computing and Engineering,University of Huddersfield, UK (June, 2003)
+
+https://baldur.iti.kit.edu/theses/ParallelizingGraphplan.pdf
