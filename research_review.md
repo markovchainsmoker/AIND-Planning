@@ -1,21 +1,22 @@
-### AIND 2018 Term 1
-### Carl Wennstam
-### Research Review
+### [AIND 2018 Term 1] Carl Wennstam - Research Review
 
-# Planners in game design
+---
+# Planners in game AI design
 
 ## Synopsis
 
-There are many ways to define AI. The two definitions given by our lecturers are
-Peter Norvig:
+Several definitions of AI exist, along two dimensions Thinking (Humanly vs Rationally) and Acting (Humanly vs Rationally). The two definitions given by our lecturers are as follows:
 
-*The study of rational behavior.
+>AI is programming a computer to do the right thing *when you don't know what the right things is*.
+	
+**Peter Norvig**
 
-Thad Starner's definition of AI
 
-*Clever solutions to exponential problems. 
+>AI is clever solutions to exponential problems. 
 
-Planning seems to me the subset of AI which fits best with both these definitions. But how useful is it currently?
+**Thad Starner**
+
+Planning seems to be one of the fields of AI which fits best with both these definitions. But how useful is it currently?
 
 
 ![Progression air cargo search](images/Progression.PNG)
