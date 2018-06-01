@@ -5,12 +5,12 @@
 
 [TOC]
 
-- #### Introduction
-	- ##### Definitions of AI
-	- ##### Practical use
-	- Choice of research papers
-- Planning in Games: An Overview and Lessons Learned
-- PDDL: A Language with a Purpose?
+- ##### Introduction
+	- ###### Definitions of AI
+	- ###### Practical use
+	- ###### Choice of research papers
+- ##### Planning in Games: An Overview and Lessons Learned
+- ##### PDDL: A Language with a Purpose?
 
 
 #### Introduction
