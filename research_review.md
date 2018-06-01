@@ -1,3 +1,4 @@
+
 ### [AIND 2018 Term 1] Carl Wennstam - Research review
 
 ---
@@ -10,6 +11,12 @@
 	- ###### Practical use
 	- ###### Choice of research papers
 - ##### Planning in Games: An Overview and Lessons Learned
+	- ###### Classical planning (STRIPS)
+	- ###### Hierarchial Networks (HTN)
+	- ###### Behavior trees
+	- ###### Utility systems	
+	- ###### Lessons learned
+
  - ##### PDDL: A Language with a Purpose?
 
 
@@ -40,11 +47,10 @@ So, in theory, planning seems at the heart of AI. But how useful is it? With the
 	- dfdf
 
 ## Planning in Games: An Overview and Lessons Learned
-### Classical vs Hierchial
-#### Classical planning (STRIPS)
+### Classical planning (STRIPS)
 Classing planning, where we go from an initial state to a goal, requires a good definition of the problem so that A* can be applied. The first major game to apply this was F.E.A.R. in 2005. A planner was implemented to generate NPC behavior. This was feasible even 13 years ago due to the problems having short sequences. The game spawned a sequel, two expansions and inspired at least 5 other title.
 One of the later iterations, Stalker (2008), added a nested structure so that more complex sequences could be generated out of the core STRIPS search.
-#### Hierarchial Networks (HTN)
+### Hierarchial Networks (HTN)
 HTN searches through actions that break down **recursively** using **task decomposition** and was first featured in Killzone 2, as the designers they wanted more control over the behaviors (approaching the Acting Humanly side). A **SHOP** (Simple Hierarchial Ordered Planner) turned out a big success, and allegedly the players were often suprised that the in-game bots were not in fact online players, thereby passing a type of **Turing test**. The later game Transformers : War for Cybertron used a similar **SHOP** algorithm which also tracked the (side)effects of all actions.
 
 Generally, SHOP focuses on two core issues in planning:
@@ -54,12 +60,12 @@ SHOP addresses these two issues to build a planner that can solve problems more 
 
 ![state space](images/shop.png)
 
-#### Behavior trees
+### Behavior trees
 Looks like an HTN but stops at current action if "this is likely to work out".
 
 It's often difficult to draw the line between hierarchical planners and behavior trees, since SHOP-inspired planners often include implementation tricks or design patterns to make them more reactive for the sake of performance. In practice, this makes them very similar to the industry-standard behavior trees, which have been in heavy use since ~2004 (with ideas inspired from robotics and virtual agents from decades before).
 
-#### Utility systems
+### Utility systems
 
 A utility system is the term used to describe a voting/scoring system, and they are often applied to sub-systems of games like selecting objects/positions based on the results of a spread-sheet like calculation. It's interesting to establish parallels between STRIPS-based planners and utility-based systems, since both have a strong emphasis on emergent behavior that's not intended to be controlled top-down by designers. Sims.
 
