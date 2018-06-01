@@ -3,7 +3,8 @@
 ---
 # Planners in game AI design
 
-## Synopsis
+## Introduction
+### Definitions of AI
 
 Several definitions of AI exist, along two dimensions Thinking (Humanly vs Rationally) and Acting (Humanly vs Rationally). **Planning** seems to be a field of AI which fits well the two definitions given by our lecturers:
 
@@ -19,20 +20,19 @@ This is the case in planning problems, as we are generating a behavior (which is
 
 This is also featured here, as we are dealing with employing **search** and **planning graphs** to **NP-hard** problems.
 
+### Practical use
+So, in theory, planning seems at the heart of AI. But how useful is it? With the recent hype around **neural networks** and **deep learning**, is planning (and planning graphs) still relevant? Some of my classmates did not seem convinced.
 
-![Progression air cargo search](images/Progression.PNG)
+### Choice of research
 
-- Part 1 - Planning problems:
-	- READ: applicable portions of the Russel/Norvig AIMA text
-	- GIVEN: problems defined in classical PDDL (Planning Domain Definition Language)
-	- TODO: Implement the Python methods and functions as marked in `my_air_cargo_problems.py`
-	- TODO: Experiment and document metrics
-- Part 2 - Domain-independent heuristics:
-	- READ: applicable portions of the Russel/Norvig AIMA text
-	- TODO: Implement relaxed problem heuristic in `my_air_cargo_problems.py`
-	- TODO: Implement Planning Graph and automatic heuristic in `my_planning_graph.py`
-	- TODO: Experiment and document metrics
-- Part 3 - Written Analysis
+- Planning in Games: Planning in Games: An Overview and Lessons Learned
+	- Active industry applications
+	- Discusses hiearical planning
+
+- PDDL: A Language with a Purpose?
+	- critique of PDDL usefullness in theoretical and practical terms
+	- dfdf
+
 
 ## Environment requirements
 - Python 3.4 or higher
