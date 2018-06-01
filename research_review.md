@@ -25,7 +25,8 @@
 
 Several definitions of AI exist, along two dimensions Thinking (Humanly vs Rationally) and Acting (Humanly vs Rationally). **Planning** seems to be a field of AI which fits well the two definitions given by our lecturers:
 >AI is programming a computer to do the right thing *when you don't know what the right things is*. - **Peter Norvig**
-   
+
+
 This is the case in planning problems, as we are generating a behavior (which is generally on the Rationalist side but might be towards the Humanist side depending on the application) without knowing what that the optimal behavior will be.
 
 >AI is clever solutions to exponential problems. - **Thad Starner**
@@ -58,7 +59,11 @@ Generally, SHOP focuses on two core issues in planning:
 - For many types of planners, including HTN, their limitation is in the flexibility of the domain. Custom procedural functions can be hard to integrate when you don’t know how the planner may combine actions while planning. So instead, it can be better to limit the expressiveness of the planner (by imposing an order on the plans) to make it easy to insert custom logic.
 SHOP addresses these two issues to build a planner that can solve problems more efficiently using domain knowledge encoded as custom logic. 
 
-![state space](images/shop.png)
+<p align="center"> 
+<img src="images/shop.png">
+</p>
+
+![SHOP](images/shop.png)
 
 ### Related techniques
 A **behavior tree** is similar to a HTN but stops at current action if "this is likely to work out", rather than searching the full graph. These have been in use in the industry since 2004, inspired by robotics and virtual agents from decades before.
