@@ -1,7 +1,7 @@
-### [AIND 2018 Term 1] Carl Wennstam - Research Review
+### [AIND 2018 Term 1] Carl Wennstam - Research review
 
 ---
-# Planners in game AI design
+# Research review
 
 ## Introduction
 ### Definitions of AI
@@ -23,7 +23,7 @@ This is also featured here, as we are dealing with employing **search** and **pl
 ### Practical use
 So, in theory, planning seems at the heart of AI. But how useful is it? With the recent hype around **neural networks** and **deep learning**, is planning (and planning graphs) still relevant? Some of my classmates did not seem convinced.
 
-### Choice of research
+### Choice of research papers
 
 - Planning in Games: Planning in Games: An Overview and Lessons Learned
 	- Active industry applications
@@ -32,6 +32,24 @@ So, in theory, planning seems at the heart of AI. But how useful is it? With the
 - PDDL: A Language with a Purpose?
 	- critique of PDDL usefullness in theoretical and practical terms
 	- dfdf
+
+## Planning in Games: An Overview and Lessons Learned
+
+
+
+
+## PDDL: A Language with a Purpose?
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Environment requirements
