@@ -91,11 +91,24 @@ Consider a market for financial transactions that is based on trading commoditie
 
 ### References
 
-- *Planning in Games: An Overview and Lessons Learned*, **Alex J. Champandard**, AiGameDev.com (2013) http://aigamedev.com/open/review/planning-in-games/
+- *Planning in Games: An Overview and Lessons Learned*, **Alex J. CHAMPANDARD**, AiGameDev.com (March, 2013) http://aigamedev.com/open/review/planning-in-games/
 
-- *PDDL: A Language with a Purpose?*, **T. L. McCluskey**, Department of Computing and Mathematical Science, School of Computing and Engineering,University of Huddersfield, UK
+- *PDDL: A Language with a Purpose?*, **T. L. MCCLUSKEY**, Department of Computing and Mathematical Science, School of Computing and Engineering,University of Huddersfield, UK (June, 2003)
 
-- *PDDL: A Language with a Purpose?*, **T. L. McCluskey**, Department of Computing and Mathematical Science, School of Computing and Engineering,University of Huddersfield, UK
+- *Planning as Tabled Logic Programming*, **N-F. ZHOU**, CUNY Brooklyn College and Graduation Center (July, 2015)   https://arxiv.org/pdf/1507.03979.pdf
+
+
+
+
+
+
+
+
+https://arxiv.org/pdf/1306.4040.pdf
+
+
+
+https://arxiv.org/pdf/1106.0230v1.pdf
 
 
    [1]: http://aigamedev.com/open/review/planning-in-games/ "Planning in Games"
