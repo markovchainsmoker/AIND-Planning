@@ -1,0 +1,8 @@
+digraph G {
+rankdir=LR
+initial [shape=record    label="{At(C1, SFO) | T}|{At(C2, JFK) | T}|{At(P1, SFO) | T}|{At(P2, JFK) | T}|{Cargo(C1) | T}|{Cargo(C2) | T}|{Plane(P1) | T}|{Plane(P2) | T}|{Airport(JFK) | T}|{Airport(SFO) | T}"];
+
+goal [shape=record    label="{At(C1, JFK) |T}|{At(C2, SFO) | T}"];
+initial -> goal [label="Solution"]
+
+}
