@@ -14,10 +14,14 @@
 	- ###### Classical planning (STRIPS)
 	- ###### Hierarchial Networks (HTN)
 	- ###### Related techniques
-	- ###### Utility systems	
 	- ###### Lessons learned
+- ##### PDDL: A Language with a Purpose?	
+	- ###### Picat's planner
+	- ###### Tabling
+	- ###### Comparison to PDDL
+	
 
- - ##### PDDL: A Language with a Purpose?
+ - ##### References
 
 
 ## Introduction
@@ -112,7 +116,7 @@ The paper argues that the features of Picat make it a more appropriate language 
 ## PDDL: A Language with a Purpose?
 
 
-### References
+## References
 
 - *Planning in Games: An Overview and Lessons Learned*, **Alex J. CHAMPANDARD**, AiGameDev.com (March, 2013) http://aigamedev.com/open/review/planning-in-games/
 
