@@ -103,15 +103,17 @@ Like state marking used in search algorithms, tabling can prevent the same state
 During search, every state encountered is tabled, and tabled states are used to eﬀectively perform resource-bounded search. In Picat, structured data can be used to **avoid enumerating all possible permutations** of objects, and term sharing is used to avoid duplication of common state data. 
 
 ### Comparison to PDDL
-As a modeling language for planning, Picat diﬀers from PDDL in several aspects: 
-1 Picat allows use of structures to represent states 
-+ Picat supports explicit commitment and nondeterministic actions, which enables users to have better control over action applications
-+ Picat provides facilities for describing domain knowledge and heuristics for pruning search space. 
+As a modeling language for planning, Picat diﬀers from PDDL in that it: 
+
+- allows use of structures to represent states. 
+- supports explicit commitment and nondeterministic actions, which enables users to have better control over action applications
+- provides facilities for describing domain knowledge and heuristics for pruning search space. 
 
 As a solving system, Picat’s planner implements several techniques for better performance. 
-1 First, it tables every state encountered during search and avoids repeating the exploration of the same state.
-+ Second, it adopts the hash-consing technique (Zhou and Have 2012) to share common state data and to speed up the equality testing of states. 
-+Third, it utilizes tabled states to eﬀectively perform resource-bounded search. 
+
+- Tabling of every state encountered during search and avoids repeating the exploration of the same state.
+- Adopts a hash-consing technique to share common state data and to speed up the equality testing of states. 
+- Using the tabled states to eﬀectively perform resource-bounded search. 
 
 ## PDDL: A Language with a Purpose?
 Argues that, going forward, more efforts are needed to define the purpose of PDDL (theoretical modelling or practical planning applications) and formalize and develop the language in that direction. 
