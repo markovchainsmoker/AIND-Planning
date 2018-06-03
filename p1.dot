@@ -1,8 +1,8 @@
 digraph G {
 rankdir=LR
-initial [shape=record    label="{At(C1, SFO) | T}|{At(C2, JFK) | T}|{At(P1, SFO) | T}|{At(P2, JFK) | T}|{Cargo(C1) | T}|{Cargo(C2) | T}|{Plane(P1) | T}|{Plane(P2) | T}|{Airport(JFK) | T}|{Airport(SFO) | T}"];
-
-goal [shape=record    label="{At(C1, JFK) |T}|{At(C2, SFO) | T}"];
-initial -> goal [label="Solution"]
+initial [fontname = helvetica,fontsize=10, shape=record    label="{At(C1, SFO) | T}|{At(C2, JFK) | T}|{At(P1, SFO) | T}|{At(P2, JFK) | T}|{Cargo(C1) | T}|{Cargo(C2) | T}|{Plane(P1) | T}|{Plane(P2) | T}|{Airport(JFK) | T}|{Airport(SFO) | T}"];
+solution [fontname = helvetica,fontsize=9, label="Solution"]
+goal [fontname = helvetica,fontsize=10, shape=record    label="{At(C1, JFK) |T}|{At(C2, SFO) | T}"];
+initial -> solution -> goal [fontname = helvetica,fontsize=9,label=""]
 
 }
