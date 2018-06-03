@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328 208" width="328pt" height="208pt">
+<g class="graph" id="graph1" transform="scale(1) rotate(0) translate(4 204)">
+<title>G</title>
+<polygon fill="white" stroke="white" points="-4,5 -4,-204 325,-204 325,5 -4,5" />
+<!-- initial -->
+<g class="node" id="node1"><title>initial</title>
+<polygon fill="none" stroke="black" points="0.6165,0 0.6165,-200 95.3835,-200 95.3835,0 0.6165,0" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="36.116" y="-187">At(C1, SFO)</text>
+<polyline fill="none" stroke="black" points="71.6155,-180 71.6155,-200" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="83.17" y="-187">T</text>
+<polyline fill="none" stroke="black" points="0.6165,-180 95.3835,-180" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="35.7265" y="-167">At(C2, JFK)</text>
+<polyline fill="none" stroke="black" points="70.8365,-160 70.8365,-180" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="82.891" y="-167">T</text>
+<polyline fill="none" stroke="black" points="0.6165,-160 95.3835,-160" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="36.341" y="-147">At(P1, SFO)</text>
+<polyline fill="none" stroke="black" points="72.0655,-140 72.0655,-160" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="83.62" y="-147">T</text>
+<polyline fill="none" stroke="black" points="0.6165,-140 95.3835,-140" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="35.4515" y="-127">At(P2, JFK)</text>
+<polyline fill="none" stroke="black" points="70.2865,-120 70.2865,-140" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="82.341" y="-127">T</text>
+<polyline fill="none" stroke="black" points="0.6165,-120 95.3835,-120" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="33.947" y="-107">Cargo(C1)</text>
+<polyline fill="none" stroke="black" points="67.2775,-100 67.2775,-120" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="80.832" y="-107">T</text>
+<polyline fill="none" stroke="black" points="0.6165,-100 95.3835,-100" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="33.947" y="-87">Cargo(C2)</text>
+<polyline fill="none" stroke="black" points="67.2775,-80 67.2775,-100" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="80.832" y="-87">T</text>
+<polyline fill="none" stroke="black" points="0.6165,-80 95.3835,-80" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="33.842" y="-67">Plane(P1)</text>
+<polyline fill="none" stroke="black" points="67.0675,-60 67.0675,-80" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="81.122" y="-67">T</text>
+<polyline fill="none" stroke="black" points="0.6165,-60 95.3835,-60" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="33.842" y="-47">Plane(P2)</text>
+<polyline fill="none" stroke="black" points="67.0675,-40 67.0675,-60" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="81.122" y="-47">T</text>
+<polyline fill="none" stroke="black" points="0.6165,-40 95.3835,-40" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="36.056" y="-27">Airport(JFK)</text>
+<polyline fill="none" stroke="black" points="71.4955,-20 71.4955,-40" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="83.05" y="-27">T</text>
+<polyline fill="none" stroke="black" points="0.6165,-20 95.3835,-20" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="36.9455" y="-7">Airport(SFO)</text>
+<polyline fill="none" stroke="black" points="73.2745,0 73.2745,-20" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="84.329" y="-7">T</text>
+</g>
+<!-- solution -->
+<g class="node" id="node2"><title>solution</title>
+<ellipse fill="none" stroke="black" cx="161" cy="-100" rx="28.3825" ry="18" />
+<text font-family="Helvetica,sans-Serif" font-size="9" text-anchor="middle" x="161" y="-97.3">Solution</text>
+</g>
+<!-- initial&#45;&gt;solution -->
+<g class="edge" id="edge2"><title>initial-&gt;solution</title>
+<path fill="none" stroke="black" d="M 95.4308 -100 C 104.385 -100 113.662 -100 122.297 -100" />
+<polygon fill="black" stroke="black" points="122.446,-103.5 132.446,-100 122.446,-96.5001 122.446,-103.5" />
+</g>
+<!-- goal -->
+<g class="node" id="node3"><title>goal</title>
+<polygon fill="none" stroke="black" points="226.446,-80 226.446,-120 319.554,-120 319.554,-80 226.446,-80" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="261.056" y="-107">At(C1, JFK)</text>
+<polyline fill="none" stroke="black" points="295.666,-100 295.666,-120" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="307.221" y="-107">T</text>
+<polyline fill="none" stroke="black" points="226.446,-100 319.554,-100" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="261.946" y="-87">At(C2, SFO)</text>
+<polyline fill="none" stroke="black" points="297.445,-80 297.445,-100" />
+<text font-family="Helvetica,sans-Serif" font-size="10" text-anchor="middle" x="308.5" y="-87">T</text>
+</g>
+<!-- solution&#45;&gt;goal -->
+<g class="edge" id="edge3"><title>solution-&gt;goal</title>
+<path fill="none" stroke="black" d="M 189.474 -100 C 197.519 -100 206.622 -100 215.771 -100" />
+<polygon fill="black" stroke="black" points="216.066,-103.5 226.066,-100 216.066,-96.5001 216.066,-103.5" />
+</g>
+</g>
+</svg>
