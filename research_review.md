@@ -4,26 +4,24 @@
 ---
 # Research review
 
-[TOC]
+- Introduction
+	- Definitions of AI
+	- Practical use
+	- Choice of research papers
+- Planning in Games: An Overview and Lessons Learned
+	- Classical planning (STRIPS)
+	- Hierarchial Networks (HTN)
+	- Related techniques
+	- Lessons learned
+- Multi-Agent Planning with Planning Graph	
+	- Agent relationships
+- PDDL: A Language with a Purpose?	
+	- Picat's planner
+	- Tabling
+	- Comparison to PDDL
+- PDDL: A Language with a Purpose?		
 
-- ##### Introduction
-	- ###### Definitions of AI
-	- ###### Practical use
-	- ###### Choice of research papers
-- ##### Planning in Games: An Overview and Lessons Learned
-	- ###### Classical planning (STRIPS)
-	- ###### Hierarchial Networks (HTN)
-	- ###### Related techniques
-	- ###### Lessons learned
-- ##### Multi-Agent Planning with Planning Graph	
-	- ###### Agent relationships
-- ##### PDDL: A Language with a Purpose?	
-	- ###### Picat's planner
-	- ###### Tabling
-	- ###### Comparison to PDDL
-- ##### PDDL: A Language with a Purpose?		
-
- - ##### References
+- References
 
 
 ## Introduction
