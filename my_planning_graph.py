@@ -31,9 +31,6 @@ class PgNode_s(PgNode):
         self.symbol = symbol
         self.is_pos = is_pos
         self.__hash = None
-        #self.literal = expr(self.symbol)
-        #if not self.is_pos:
-        #    self.literal = expr('~{}'.format(self.symbol))
 
     def show(self):
         if self.is_pos:
@@ -45,8 +42,6 @@ class PgNode_s(PgNode):
     def __eq__(self, other):
 
         return (isinstance(other, self.__class__) and self.is_pos == other.is_pos and self.symbol == other.symbol)
-#            return (self.symbol == other.symbol) \
- #                  and (self.is_pos == other.is_pos)
 
     def __not_eq__(self, other):
         '''inequality test for nodes - compares only the literal for equality
@@ -61,7 +56,6 @@ class PgNode_s(PgNode):
     def __hash__(self):
         self.__hash = self.__hash or hash(self.symbol) ^ hash(self.is_pos)
         return self.__hash
-        #return hash(self.symbol) ^ hash(self.is_pos)
 
 
 class PgNode_a(PgNode):
@@ -103,15 +97,12 @@ class PgNode_a(PgNode):
         return (isinstance(other,self.__class__) and
                 self.is_persistent == other.is_persistent and
                 self.action.name == other.action.name) and (self.action.args == other.action.args)
-#        if isinstance(other, self.__class__):
- #           return (self.action.name == other.action.name) \
-  #                 and (self.action.args == other.action.args)
 
     def __hash__(self):
         self.__hash = self.__hash or hash(self.action.name) ^ hash(self.action.args)
         return self.__hash
    
-        #return hash(self.action.name) ^ hash(self.action.args)
+
 
 
 def mutexify(node1: PgNode, node2: PgNode):
@@ -252,10 +243,10 @@ class PlanningGraph():
  
         actions_s1 = node_a1.parents
         actions_s2 = node_a2.parents
-        return True if [(a_s1, a_s2)
-                         for a_s1 in actions_s1
-                         for a_s2 in actions_s2
-                         if a_s1.is_mutex(a_s2)] \
+        return True if [(a1, a2)
+                         for a1 in actions_s1
+                         for a2 in actions_s2
+                         if a1.is_mutex(a2)] \
                     else False
 
     def update_s_mutex(self, nodeset: set):
@@ -275,10 +266,11 @@ class PlanningGraph():
         actions_s1 = node_s1.parents
         actions_s2 = node_s2.parents
 
-        return False if [(a_s1, a_s2)
-                         for a_s1 in actions_s1
-                         for a_s2 in actions_s2
-                         if not a_s1.is_mutex(a_s2)] \
+
+        return False if [(a1, a2)
+                         for a1 in actions_s1
+                         for a2 in actions_s2
+                         if not a1.is_mutex(a2)] \
                      else True
 
     def h_levelsum(self) -> int:
