@@ -1,6 +1,5 @@
- 
-### [AIND 2018 Term 1] Carl Wennstam - Research review
 
+### [AIND 2018 Term 1] Carl Wennstam - Research review
 ---
 # Research review
 
