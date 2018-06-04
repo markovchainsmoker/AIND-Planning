@@ -108,17 +108,18 @@ class AirCargoProblem(Problem):
             """
             flys = []
             for fr in self.airports:
-                for to in self.airports:
-                    if fr != to:
-                        for p in self.planes:
-                            precond_pos = [expr("At({}, {})".format(p, fr))]
-                            precond_neg = []
-                            effect_add = [expr("At({}, {})".format(p, to))]
-                            effect_rem = [expr("At({}, {})".format(p, fr))]
-                            fly = Action(expr("Fly({}, {}, {})".format(p, fr, to)),
+                for to in set(self.airports)-set(fr):
+                #for to in self.airports:
+                 #   if fr != to:
+                    for p in self.planes:
+                        precond_pos = [expr("At({}, {})".format(p, fr))]
+                        precond_neg = []
+                        effect_add = [expr("At({}, {})".format(p, to))]
+                        effect_rem = [expr("At({}, {})".format(p, fr))]
+                        fly = Action(expr("Fly({}, {}, {})".format(p, fr, to)),
                                          [precond_pos, precond_neg],
                                          [effect_add, effect_rem])
-                            flys.append(fly)
+                        flys.append(fly)
             return flys
 
         return load_actions() + unload_actions() + fly_actions()
