@@ -210,26 +210,6 @@ class AirCargoProblem(Problem):
                 count += 1
         return count
 
-    def h_ignore_effect_rem(self, node: Node):
-        """
-        This heuristic estimates the minimum number of actions that must be
-        carried out from the current state in order to satisfy all of the goal
-        conditions by further relaxing the preconditions.
-        
-        Specifically, we make the assumption that all goals and preconditions
-        contain only positive literals.
-        Thus, we can ignore the effect_rem from all actions so that no
-        action is undoed by another action.
-        """
-        # Russell-Norvig Ed-3 10.2.3, p. 377
-        count = 0
-        kb = PropKB()
-        kb.tell(decode_state(node.state, self.state_map).pos_sentence())
-        for action in self.actions_list:
-            for clause in self.goal:
-                if clause in action.effect_rem:
-                    count += 1
-            return count
 
 
 def air_cargo_p1() -> AirCargoProblem:
